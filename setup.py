@@ -83,8 +83,7 @@ setup(
     # https://packaging.python.org/en/latest/requirements.html
     install_requires=[
         'antlr4-python2-runtime>=4.7,<4.8;python_version<"3"',
-        'antlr4-python3-runtime>=4.7,<4.8;python_version>="3"',
-        ],
+    ],
 
     # List additional groups of dependencies here (e.g. development dependencies).
     # You can install these using the following syntax, for example:

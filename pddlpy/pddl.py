@@ -53,6 +53,7 @@ class Obj():
     def __init__(self):
         self.variable_list = {}
 
+
 class Operator():
     """Represents and action. Can be grounded or ungrounded.
     Ungrounded operators have a '?' in names (unbound variables).
@@ -347,10 +348,12 @@ class DomainProblem():
     def _set_operator_groundspace(self, opname, variables):
         # cache the variables ground space for each operator.
         if opname not in self.vargroundspace:
-            d = self.vargroundspace.setdefault(opname, {})
+            d = self.vargroundspace[opname] = dict()
             for vname, t in variables:
+                if vname not in d:
+                    d[vname] = []
                 for symb in self._typesymbols(t):
-                    d.setdefault(vname, []).append(symb)
+                    d[vname].append(symb)
 
     def _instantiate(self, opname):
         d = self.vargroundspace[opname]

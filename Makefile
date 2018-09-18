@@ -1,13 +1,13 @@
 
-ANTLRDIR=/usr/local/opt/antlr
-ANTLRLIB=$(ANTLRDIR)/antlr-4.7-complete.jar
+ANTLRDIR=/usr/local/Cellar/antlr/4.7.1
+ANTLRLIB=$(ANTLRDIR)/antlr-4.7.1-complete.jar
 ANTLR=$(ANTLRDIR)/bin/antlr4
 GRUN=$(ANTLRDIR)/bin/grun
 
 # For dotnet
 NUNITVERSION=3.6.1
 ANTLRNET=Antlr4.Runtime.Standard
-ANTLRDLL=Antlr4.Runtime.Standard.4.7.0/lib/net35/Antlr4.Runtime.Standard.dll
+ANTLRDLL=Antlr4.Runtime.Standard.4.7.1.1/lib/net35/Antlr4.Runtime.Standard.dll
 DLLSPATH=../pddlnet
 CSANTLR=pddlListener.cs pddlBaseListener.cs pddlLexer.cs pddlParser.cs
 NUNITLIB=NUnit.$(NUNITVERSION)/lib/net45/nunit.framework.dll
